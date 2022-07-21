@@ -15,7 +15,7 @@ def controller(q1, q2, w1, w2, q1_desired, q2_desired):
     t2: The torques required for the motor 2 for the current state
     '''
     # edit the code given below
-    t1 = 0
-    t2 = 0
+    t1 = 10
+    t2 = 20
 
     return t1, t2
