@@ -21,7 +21,7 @@ def controller(q1, q2, w1, w2, q1_desired, q2_desired):
     d=math.sin(q2-q2_desired)
     e=math.cos(q1_desired+q2_desired)
     # edit the code given below
-    t1 = (2*9.8*a)+(9.8*b)-(c*(2*w1*w2+w2*w2))
+    t1 = (2*9.8*a)+(9.8*b)-(c*((2*w1*w2)+(w2*w2)))
     t2 = ((w1*w1*d)+(9.8*e))
 
     return t1, t2
