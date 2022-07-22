@@ -1,3 +1,5 @@
+from cmath import sin
+import math
 def controller(q1, q2, w1, w2, q1_desired, q2_desired):
     '''
     input:->
@@ -15,7 +17,7 @@ def controller(q1, q2, w1, w2, q1_desired, q2_desired):
     t2: The torques required for the motor 2 for the current state
     '''
     # edit the code given below
-    t1 = 0.1
-    t2 = 0.2
+    t1 = (2*9.8*sin(q1_desired))+(9.8*sin(q1_desired+q2_desired))-(2*sin(q2_desired)*w1*w2)-(sin(q2_desired)*w2*w2)
+    t2 = (9.8*sin(q1_desired+q2_desired))+(sin(q2_desired)*w1*w1)
 
     return t1, t2
