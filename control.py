@@ -17,7 +17,7 @@ def controller(q1, q2, w1, w2, q1_desired, q2_desired):
     t2: The torques required for the motor 2 for the current state
     '''
     # edit the code given below
-    t1 = ((2*10*cos(q1_desired))+(10*cos(q1_desired+q2_desired))-(sin(q2_desired)(2*w1*w2+w2*w2)))
-    t2 = ((w1*w1*sin(q2_desired))+(10*cos(q1_desired+q2_desired)))
+    t1 = ((2*9.8*cos(q1-q1_desired))+(9.8*cos(q1_desired+q2_desired))-(sin(q2-q2_desired)(2*w1*w2+w2*w2)))
+    t2 = ((w1*w1*sin(q2-q2_desired))+(9.8*cos(q1_desired+q2_desired)))
 
     return t1, t2
