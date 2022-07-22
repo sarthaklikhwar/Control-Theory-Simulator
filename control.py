@@ -15,15 +15,15 @@ def controller(q1, q2, w1, w2, q1_desired, q2_desired):
     t1: The torques required for the motor 1 for the current state
     t2: The torques required for the motor 2 for the current state
     '''
-    a=math.cos(q1_desired)
-    b=math.cos(q1_desired+q2_desired)
-    c=math.sin(q2_desired)
+    a=math.cos(q1-q1_desired)
+    b=math.cos(q1-q1_desired+q2-q2_desired)
+    c=math.sin(q2-q2_desired)
     d=math.sin(q2-q2_desired)
-    e=math.cos(q1_desired+q2_desired)
+    e=math.cos(q1-q1_desired+q2-q2_desired)
     # edit the code given below
-    t1 = (2*9.8*a)+(9.8*b)-(c*((2*w1*w2)+(w2*w2)))
-    t2 = ((w1*w1*d)+(9.8*e))
-
+    t1 =2*(30*(q1-q1_desired)-15*w1)+math.cos(q1-q2)*(30*(q2_desired-q2)-10*w2) 
+    t2 =math.cos(q1-q2)*(30*(q1_desired-q1)-15*w1)+30*(q2_desired-q2)+10*w2
+    ##print(a,b,c,d,e)
     return t1, t2
 ##g=-(math.pi/2)
 ##h=-(math.pi/2)
