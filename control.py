@@ -21,11 +21,11 @@ def controller(q1, q2, w1, w2, q1_desired, q2_desired):
     d=math.sin(q2-q2_desired)
     e=math.cos(q1-q1_desired+q2-q2_desired)
     # edit the code given below
-    t1 =(-math.sin(q2_desired)*w2*w2)-2*math.sin(q2_desired)*w1*w2+math.sin(q1_desired+q2_desired)+2*9.8*math.sin(q2_desired)
-    t2 =9.8*math.sin(q1_desired+q2_desired)
+    t1 =(1.85+(2*0.5*math.cos(q2_desired)))+(0.55+(0.5*math.cos(q2_desired)))-(0.5*math.sin(q2_desired)*w1*w2)-(math.sin(q2_desired)*w2)
+    t2=(0.55+(0.5*math.cos(q2_desired)))+0.5+(0.5*math.sin(q2_desired)*w1*w1)
     ##print(a,b,c,d,e)
     return t1, t2
-##g=-(math.pi/2)
+##g=-(math.pi/2)(0.55)
 ##h=-(math.pi/2)
 ##q=(math.pi/2)
 ##print(controller(g,h,1,1,q,0))
