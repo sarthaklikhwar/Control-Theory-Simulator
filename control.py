@@ -17,8 +17,8 @@ def controller(q1, q2, w1, w2, q1_desired, q2_desired):
     '''
   
     # edit the code given below
-    t1=2*(32*(q1_desired-q1)-(17*w1))+math.cos(q1_desired-q2_desired)*(32*(q2_desired-q2)-(12*w2))
-    t2=math.cos(q1_desired-q2_desired)*(32*(q1_desired-q1)-(17*w1))+(32*(q2_desired-q2))-12*w2
+    t1=2*(32*(q1_desired-q1)-(18*w1))+math.cos(q1_desired-q2_desired)*(32*(q2_desired-q2)-(15*w2))
+    t2=math.cos(q1_desired-q2_desired)*(32*(q1_desired-q1)-(18*w1))+(32*(q2_desired-q2))-15*w2
     return t1, t2
 g=-(math.pi/2)
 h=-(math.pi/2)
