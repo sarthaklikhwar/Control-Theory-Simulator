@@ -69,9 +69,9 @@ def simulate():
                     addFrame=False
                 blank_canvas = getRefImage(blank_canvas, out, k, trajectories[key], addFrame) 
 
-        for k in tqdm(range(60000), desc="Creating {}'s control trajectory".format(key)):
+        for k in tqdm(range(10000), desc="Creating {}'s control trajectory".format(key)):
             q_k=q
-            if(k<3000 and k%2==0):
+            if(k<5000 and k%2==0):
                 blank_canvas= getImage(q_k, out, blank_canvas)
             qd_k=qd
             tau_k = T(q,qd,k, trajectories[key])
