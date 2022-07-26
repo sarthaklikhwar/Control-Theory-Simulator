@@ -19,6 +19,6 @@ def controller(q1, q2, w1, w2, q1_desired, q2_desired):
     # edit the code given below
     a1=2000*(q1_desired-q1)-150*w1
     a2=2000*(q2_desired-q2)-160*w2
-    t1 = (3+2*math.cos(q2))*a1+(1+math.cos(q2)*a2+0.5*(2*math.sin(q2)*w1*w2+math.sin(q2)*w2*w2)+0.5*9.8*(2*math.sin(q1))+math.sin(q1+q2))
-    t2 = (1+math.cos(q2))*a1+a2-0.5*math.sin(q2)*w1*w1+0.5*9.8*math.sin(q1+q2)
+    t1 =((2.1+math.cos(q2_desired))*a1)+((0.58+0.5*math.cos(q2_desired))*a2)-(math.sin(q2_desired)*w1*w2)-(0.5*math.sin(q2_desired)*w2*w2)+(4.9*math.cos(q1_desired))+(9.8*math.cos(q1_desired))+(4.9*math.cos(q1_desired+q2_desired))
+    t2 = ((0.58+0.5*math.cos(q2_desired))*a1)+(0.58*a2)+(0.5*math.sin(q2_desired)*w1*w1)+(4.9*math.cos(q2_desired+q2_desired))
     return t1,t2
