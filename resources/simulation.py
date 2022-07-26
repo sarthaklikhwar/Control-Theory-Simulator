@@ -61,7 +61,7 @@ def simulate():
         t_sampling = 0.001
 
         
-        for k in tqdm(range(4000), desc="Creating {}'s reference trajectory".format(key)):
+        for k in tqdm(range(6000), desc="Creating {}'s reference trajectory".format(key)):
             if(k<4000 and k%2==0):
                 if(k%20==0):
                     addFrame=True
