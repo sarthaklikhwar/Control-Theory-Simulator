@@ -61,7 +61,7 @@ def simulate():
         t_sampling = 0.001
 
         
-        for k in tqdm(range(6000), desc="Creating {}'s reference trajectory".format(key)):
+        for k in tqdm(range(4000), desc="Creating {}'s reference trajectory".format(key)):
             if(k<4000 and k%2==0):
                 if(k%20==0):
                     addFrame=True
@@ -71,7 +71,7 @@ def simulate():
 
         for k in tqdm(range(10000), desc="Creating {}'s control trajectory".format(key)):
             q_k=q
-            if(k<4500 and k%2==0):
+            if(k<4000 and k%2==0):
                 blank_canvas= getImage(q_k, out, blank_canvas)
             qd_k=qd
             tau_k = T(q,qd,k, trajectories[key])
